@@ -1,11 +1,9 @@
-import colors from 'tailwindcss/colors';
 export default {
   darkMode: "class",
   content: ["./src/**/*.{astro,html,js,jsx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
       colors: {
-        colors,
         'main-blue-primary': '#00539b',
         'main-blue-25tint': '#407eb4',
         'main-blue-50tint': '#80a9cd',
