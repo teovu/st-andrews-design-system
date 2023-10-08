@@ -34,10 +34,10 @@ const navItems = [
 		<p class="text-lg mt-4 text-slate-300">{SITE.description}</p>
 	</header>
 	<nav>
-		<ul class="flex gap-4 max-w-5xl mx-auto text-left mt-12">
+		<ul class="flex flex-col sm:flex-row gap-4 max-w-5xl mx-auto text-left mt-12">
 		{
 			navItems.map(({ title, description, url, img }) => (
-				<a href={url} class="flex flex-col bg-white  hover:-translate-y-1 hover:shadow-lg transition-all flex-1 items-center p-4 text-left">
+				<a href={url} class="flex flex-col bg-white hover:-translate-y-1 hover:shadow-lg transition-all items-center p-4 text-left">
 					<img src={img} alt={title}>
 					<h2 class="text-lg font-medium text-left">{title}</h2>
 					<p class="text-slate-500">{description}</p>
@@ -47,6 +47,7 @@ const navItems = [
 		</ul>
 	</nav>
 </div>
+
 
 <script is:inline>
 </script>

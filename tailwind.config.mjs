@@ -3,6 +3,7 @@ export default {
   content: ["./src/**/*.{astro,html,js,jsx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
+      display: ['responsive'],
       colors: {
         'main-blue-primary': '#00539b',
         'main-blue-25tint': '#407eb4',
