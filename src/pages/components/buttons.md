@@ -1,0 +1,45 @@
+---
+title: "Buttons"
+layout: "../../layouts/MainLayout.astro"
+setup: |
+  import MainButton from '../../components/MainButton.vue'
+---
+
+# Buttons
+
+Buttons are used to help a user carry out an action, such as starting an application process, or changing the current page, such as submitting a form.
+<div class="component-preview">
+    <MainButton primary>Button</MainButton>
+</div>
+
+## Table of contents
+1. [Rules for buttons](#rules-for-buttons)
+2. [Primary button](#primary-button)
+3. [Action button](#action-button)
+
+
+
+## Rules for buttons
+  1. Buttons must be used only within main body of a page; they must not be used in asides.
+  2. Buttons must not be used mid-sentence. They must always appear on their own line separated from written content.
+  3. Buttons linking to downloadable content must use the icon button option.
+
+```js
+  <MainButton primary>Primary</MainButton>
+```
+
+## Primary button
+
+We use the primary button for main actions like saving a form or creating a new item.
+
+<div class="component-preview">
+    <MainButton primary>Primary button</MainButton>
+</div>
+
+```js
+<MainButton primary>Primary button</MainButton>
+```
+
+## Action button
+
+## Icon buttons
