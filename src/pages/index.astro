@@ -1,0 +1,54 @@
+---
+import { SITE } from "../config";
+const navItems = [
+	{
+		title: 'Core',
+		description: 'Base colors, typography, and more.',
+		url: '/core/introduction',
+		img: '/Core.jpg'
+	},
+	{
+		title: 'Components',
+		description: 'The building blocks for our UI.',
+		url: '/components/buttons',
+		img: '/Components.jpg'
+	},
+	{
+		title: 'Patterns',
+		description: 'Common patterns for building interfaces.',
+		url: '/patterns/introduction',
+		img: '/Patterns.jpg'
+	},
+]
+
+// Test
+---
+
+
+
+<div class="bg-[#0071B3] min-h-screen text-center blue-primary">
+	<header class="pt-12 pb-12 bg-slate-950">
+		<div class="flex items-center justify-center p-4">
+			<img src="/astro-design-system-logo.svg" alt="University of St Andrews Logo">
+		</div>
+		<h1 class=" text-white text-4xl font-medium drop-shadow-sm">{SITE.title}</h1>
+		<p class="text-lg mt-4 text-slate-300">{SITE.description}</p>
+	</header>
+	<nav>
+		<ul class="flex flex-col sm:flex-row gap-4 max-w-5xl mx-auto text-left mt-12">
+		{
+			navItems.map(({ title, description, url, img }) => (
+				<a href={url} class="flex flex-col bg-white hover:-translate-y-1 hover:shadow-lg transition-all items-center p-4 text-left">
+					<img src={img} alt={title}>
+					<h2 class="text-lg font-medium text-left">{title}</h2>
+					<p class="text-slate-500">{description}</p>
+				</a>
+			))
+		}
+		</ul>
+	</nav>
+</div>
+
+
+<script is:inline>
+</script>
