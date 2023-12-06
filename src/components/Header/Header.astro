@@ -1,6 +1,9 @@
 ---
+import DocSearchReact from "./DocSearchReact";
 import { SITE } from '../../config';
 import SkipToContent from './SkipToContent.astro';
+
+import '@docsearch/css';
 
 const { currentPage } = Astro.props;
 ---
@@ -15,6 +18,10 @@ const { currentPage } = Astro.props;
 				</h1>
 			</a>
 		</div>
+
+		//Algolia Docsearch component (Header/DocSearchReact)
+		<DocSearchReact client:only="react"/>
+
 		<div class="flex gap-2">
 
 		<!-- <button onclick="toggleDarkMode()">theme</button> -->
@@ -35,3 +42,5 @@ const { currentPage } = Astro.props;
 	// 	console.log('dark mode toggled');
 	// }
 </script>
+
+
