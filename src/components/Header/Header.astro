@@ -1,6 +1,7 @@
 ---
 import { SITE } from '../../config';
 import SkipToContent from './SkipToContent.astro';
+import DocSearchReact from './DocSearchReact';
 
 const { currentPage } = Astro.props;
 ---
@@ -15,8 +16,11 @@ const { currentPage } = Astro.props;
 				</h1>
 			</a>
 		</div>
-		<div class="flex gap-2">
 
+		<!-- Algolia Docsearch component (Header/DocSearchReact) -->
+		<DocSearchReact client:only="react"/>
+
+		<div class="flex gap-2">
 		<!-- <button onclick="toggleDarkMode()">theme</button> -->
 		{
 			SITE.github &&
