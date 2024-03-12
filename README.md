@@ -37,7 +37,7 @@ Welcome to the Saint Andrews Design System. This system provides a comprehensive
 To clone the repository, open your terminal (Command Prompt for Windows, Terminal for Mac) and run:
 
 ```bash
-git clone [https://gitlab-its.st-andrews.ac.uk/digital-communications/standards/standards-design-system.git]
+git clone "https://gitlab-its.st-andrews.ac.uk/digital-communications/standards/standards-design-system.git"
 ```
 
 ### Setting Up the Project
