@@ -45,7 +45,7 @@ git clone [https://gitlab-its.st-andrews.ac.uk/digital-communications/standards/
 After cloning the repository, navigate to the cloned directory:
 
 ```bash
-cd saint-andrews-design-system
+cd standards-design-system
 ```
 
 Install all the necessary Node.js dependencies:
