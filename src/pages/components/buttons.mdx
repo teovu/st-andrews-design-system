@@ -2,43 +2,228 @@
 title: "Buttons"
 layout: "../../layouts/MainLayout.astro"
 ---
-import MainButton from '../../components/MainButton.vue';
 
 # Buttons
 
 Buttons are used to help a user carry out an action, such as starting an application process, or changing the current page, such as submitting a form.
-<div class="component-preview">
-    <MainButton primary>Button</MainButton>
-</div>
+
 
 ## Table of contents
 1. [Rules for buttons](#rules-for-buttons)
-2. [Primary button](#primary-button)
+2. [Primary button - larger size](#primary-button---larger-size)
 3. [Action button](#action-button)
-
-
+4. [Secondary action button](#secondary-action-button)
+5. [Secondary and tertiary buttons](#secondary-and-tertiary-buttons)
+6. [Icon buttons ](#icon-buttons)
+7. [Tag buttons ](#tag-buttons)
+8. [Small tag buttons](#small-tag-buttons)
+9. [Extra small tag buttons](#extra-small-tag-buttons)
+10. [Dropdown buttons](#dropdown-buttons)
 
 ## Rules for buttons
   1. Buttons must be used only within main body of a page; they must not be used in asides.
   2. Buttons must not be used mid-sentence. They must always appear on their own line separated from written content.
   3. Buttons linking to downloadable content must use the icon button option.
 
-```js
-  <MainButton primary>Primary</MainButton>
-```
-
 ## Primary button
 
 We use the primary button for main actions like saving a form or creating a new item.
 
 <div class="component-preview">
-    <MainButton primary>Primary button</MainButton>
+
 </div>
 
 ```js
-<MainButton primary>Primary button</MainButton>
+  <a type="button" class="btn btn-primary" href="#">Primary</a>
+```
+
+## Primary button - larger size
+
+The standard button style in a larger size using btn-lg class.
+
+<div class="component-preview">
+    <a type="button" class="btn btn-lg btn-primary" href="#">Primary</a>
+</div>
+
+```js
+  <a type="button" class="btn btn-lg btn-primary" href="#">Primary</a>
 ```
 
 ## Action button
+Action buttons are used to signify the most prominent call to action on a page.
+- There should only be one per page.
 
+<div class="component-preview">
+    <a type="button" class="btn btn-action" href="#">Action</a>
+</div>
+
+```js
+  <a type="button" class="btn btn-action" href="#">Action</a>
+```
+
+## Secondary action button
+Secondary action buttons are used to signify other prominent call to actions on a page that are in addition to the action button.
+
+<div class="component-preview">
+  <a type="button" class="btn btn-action-secondary" href="#">Secondary action</a>
+</div>
+
+```js
+  <a type="button" class="btn btn-action-secondary" href="#">Secondary action</a>
+```
+
+## Secondary and tertiary buttons
+Secondary and tertiary buttons are used to compliment the primary button when not all actions are of equal importance. These different button colours may also be used when the primary blue colour does not match the context that they are used.
+
+<div class="component-preview">
+  <a type="button" class="btn btn-lg btn-secondary" href="#">Secondary</a>
+  <a type="button" class="btn btn-lg btn-tertiary-1" href="#">Tertiary 1</a>
+  <a type="button" class="btn btn-lg btn-tertiary-2" href="#">Tertiary 2</a>
+  <a type="button" class="btn btn-lg btn-tertiary-3" href="#">Tertiary 3</a>
+</div>
+
+```js
+  <a type="button" class="btn btn-lg btn-secondary" href="#">Secondary</a>
+  <a type="button" class="btn btn-lg btn-tertiary-1" href="#">Tertiary 1</a>
+  <a type="button" class="btn btn-lg btn-tertiary-2" href="#">Tertiary 2</a>
+  <a type="button" class="btn btn-lg btn-tertiary-3" href="#">Tertiary 3</a>
+```
 ## Icon buttons
+Icons are not a replacement for clear text labels, but they can act as an additional visual clue for the button action.
+
+- The icon must be placed immediately after the button text.
+- Include the btn-icon class to adjust the position of the icon
+- An icon button must be used when the button action is to download a file.
+- An associated Font Awesome icon to the downloadable file must be included in the button.
+
+<div class="component-preview">
+  <a type="button" class="btn btn-lg btn-icon btn-primary" href="#">PDF document<i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+  <a type="button" class="btn btn-lg btn-icon btn-primary" href="#">ZIP file<i class="fa fa-file-zip-o" aria-hidden="true"></i></a>
+  <a type="button" class="btn btn-lg btn-icon btn-primary" href="#">Word document<i class="fa fa-file-word-o" aria-hidden="true"></i></a>
+  <a type="button" class="btn btn-lg btn-icon btn-primary" href="#">Powerpoint presentation<i class="fa fa-file-powerpoint-o" aria-hidden="true"></i></a>
+</div>
+
+```js
+<a type="button" class="btn btn-lg btn-icon btn-primary" href="#">PDF document<i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+<a type="button" class="btn btn-lg btn-icon btn-primary" href="#">ZIP file<i class="fa fa-file-zip-o" aria-hidden="true"></i></a>
+<a type="button" class="btn btn-lg btn-icon btn-primary" href="#">Word document<i class="fa fa-file-word-o" aria-hidden="true"></i></a>
+<a type="button" class="btn btn-lg btn-icon btn-primary" href="#">Powerpoint presentation<i class="fa fa-file-powerpoint-o" aria-hidden="true"></i></a>
+```
+
+## Tag buttons
+Must only be used when linking to a tag or categories results page.
+
+<div class="component-preview">
+  <a type="button" class="btn btn-tag" href="#">St Andrews</a>
+  <a type="button" class="btn btn-tag" href="#">Scotland</a>
+  <a type="button" class="btn btn-tag" href="#">Digital pattern library</a>
+  <a type="button" class="btn btn-tag" href="#">Climate change</a>
+  <a type="button" class="btn btn-tag" href="#">Marine biology</a>
+</div>
+
+```js
+  <a type="button" class="btn btn-tag" href="#">St Andrews</a>
+  <a type="button" class="btn btn-tag" href="#">Scotland</a>
+  <a type="button" class="btn btn-tag" href="#">Digital pattern library</a>
+  <a type="button" class="btn btn-tag" href="#">Climate change</a>
+  <a type="button" class="btn btn-tag" href="#">Marine biology</a>
+```
+
+## Small tag buttons
+Must only be used when linking to a tag or categories results page.
+
+<div class="component-preview">
+  <a type="button" class="btn btn-small-tag" href="#">St Andrews</a>
+  <a type="button" class="btn btn-small-tag" href="#">Scotland</a>
+  <a type="button" class="btn btn-small-tag" href="#">Digital pattern library</a>
+  <a type="button" class="btn btn-small-tag" href="#">Climate change</a>
+  <a type="button" class="btn btn-small-tag" href="#">Marine biology</a>
+</div>
+
+```js
+  <a type="button" class="btn btn-small-tag" href="#">St Andrews</a>
+  <a type="button" class="btn btn-small-tag" href="#">Scotland</a>
+  <a type="button" class="btn btn-small-tag" href="#">Digital pattern library</a>
+  <a type="button" class="btn btn-small-tag" href="#">Climate change</a>
+  <a type="button" class="btn btn-small-tag" href="#">Marine biology</a>
+```
+
+## Extra small tag buttons
+Must only be used when linking to a tag or categories results page.
+
+<div class="component-preview">
+  <a type="button" class="btn btn-xsmall-tag" href="#">St Andrews</a>
+  <a type="button" class="btn btn-xsmall-tag" href="#">Scotland</a>
+  <a type="button" class="btn btn-xsmall-tag" href="#">Digital pattern library</a>
+  <a type="button" class="btn btn-xsmall-tag" href="#">Climate change</a>
+  <a type="button" class="btn btn-xsmall-tag" href="#">Marine biology</a>
+</div>
+
+```js
+  <a type="button" class="btn btn-xsmall-tag" href="#">St Andrews</a>
+  <a type="button" class="btn btn-xsmall-tag" href="#">Scotland</a>
+  <a type="button" class="btn btn-xsmall-tag" href="#">Digital pattern library</a>
+  <a type="button" class="btn btn-xsmall-tag" href="#">Climate change</a>
+  <a type="button" class="btn btn-xsmall-tag" href="#">Marine biology</a>
+```
+
+## Dropdown buttons
+Can be used to show multiple options in a single dropdown list. This example shows both the primary and the small tag style of buttons, with the dropdown menu adjusting to match its parent button font size and padding.
+
+<div class="component-preview">
+  <a type="button" class="btn btn-xsmall-tag" href="#">St Andrews</a>
+  <a type="button" class="btn btn-xsmall-tag" href="#">Scotland</a>
+  <a type="button" class="btn btn-xsmall-tag" href="#">Digital pattern library</a>
+  <a type="button" class="btn btn-xsmall-tag" href="#">Climate change</a>
+  <div class="dropdown">
+    <button id="dropdown-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-lg btn-primary dropdown-toggle">Dropdown trigger</button>
+    <ul class="dropdown-menu" aria-labelledby="dropdown-primary">
+      <li><a href="">Dropdown option 1</a></li>
+      <li><a href="">Dropdown option 2</a></li>
+      <li><a href="">Dropdown option 3</a></li>
+    </ul>
+  </div>
+  <div class="dropdown">
+    <button id="dropdown-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-primary dropdown-toggle">Dropdown trigger</button>
+    <ul class="dropdown-menu" aria-labelledby="dropdown-primary">
+      <li><a href="">Dropdown option 1</a></li>
+      <li><a href="">Dropdown option 2</a></li>
+      <li><a href="">Dropdown option 3</a></li>
+    </ul>
+  </div>
+  <div class="dropdown">
+    <button id="dropdown-small" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-small-tag dropdown-toggle">Dropdown trigger</button>
+    <ul class="dropdown-menu" aria-labelledby="dropdown-small">
+      <li><a href="">Dropdown option 1</a></li>
+      <li><a href="">Dropdown option 2</a></li>
+      <li><a href="">Dropdown option 3</a></li>
+    </ul>
+  </div>
+</div>
+
+```js
+ <div class="dropdown">
+    <button id="dropdown-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-lg btn-primary dropdown-toggle">Dropdown trigger</button>
+    <ul class="dropdown-menu" aria-labelledby="dropdown-primary">
+      <li><a href="">Dropdown option 1</a></li>
+      <li><a href="">Dropdown option 2</a></li>
+      <li><a href="">Dropdown option 3</a></li>
+    </ul>
+  </div>
+  <div class="dropdown">
+    <button id="dropdown-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-primary dropdown-toggle">Dropdown trigger</button>
+    <ul class="dropdown-menu" aria-labelledby="dropdown-primary">
+      <li><a href="">Dropdown option 1</a></li>
+      <li><a href="">Dropdown option 2</a></li>
+      <li><a href="">Dropdown option 3</a></li>
+    </ul>
+  </div>
+  <div class="dropdown">
+    <button id="dropdown-small" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-small-tag dropdown-toggle">Dropdown trigger</button>
+    <ul class="dropdown-menu" aria-labelledby="dropdown-small">
+      <li><a href="">Dropdown option 1</a></li>
+      <li><a href="">Dropdown option 2</a></li>
+      <li><a href="">Dropdown option 3</a></li>
+    </ul>
+  </div>
+```
