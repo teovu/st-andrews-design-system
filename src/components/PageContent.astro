@@ -3,12 +3,14 @@ const { content, githubEditUrl } = Astro.props;
 const title = content.title;
 // const headers = content.astro.headers;
 ---
-
-<article id="article" class="content">
-	<section class="main-section">
-		<nav class="block sm:hidden">
-		</nav>
+<!-- Main Content -->
+<div class="container">
+	<div class="col-12">
+<article>
+	<section>
 		<slot />
 	</section>
 </article>
+</div>
+</div>
 

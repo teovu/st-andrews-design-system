@@ -1,6 +1,7 @@
 ---
 import './../styles/main.scss';
 import { SITE } from "../config";
+import MainLayout from '../layouts/MainLayout.astro';
 const navItems = [
 	{
 		title: 'Core',
@@ -26,16 +27,8 @@ const navItems = [
 ---
 
 
-
-<div class="bg-[#0071B3] min-h-screen text-center blue-primary">
-	<header class="pt-12 pb-12">
-		<div class="flex items-center justify-center p-4">
-			<img src="/astro-design-system-logo.svg" alt="University of St Andrews Logo">
-		</div>
-		<h1 class=" text-white text-4xl font-medium drop-shadow-sm">{SITE.title}</h1>
-		<p class="text-lg mt-4 text-slate-300">{SITE.description}</p>
-	</header>
-	<nav>
+<MainLayout>
+<body>
 		<ul class="flex flex-col sm:flex-row gap-4 max-w-5xl mx-auto text-left mt-12">
 		{
 			navItems.map(({ title, description, url, img }) => (
@@ -49,7 +42,5 @@ const navItems = [
 		</ul>
 	</nav>
 </div>
-
-
-<script is:inline>
-</script>
+</body>
+</MainLayout>

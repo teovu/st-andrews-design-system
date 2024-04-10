@@ -1,0 +1,62 @@
+---
+import { NAVIGATION } from '../config';
+const { currentPage } = Astro.props;
+const currentPageMatch = Astro.props.currentPage ? Astro.props.currentPage.slice(1) : "";
+
+
+const isCurrentPage = (item) => {
+	if (item.link) {
+		return item.link.includes(currentPageMatch);
+	}
+	return false;
+};
+
+const getLinkClasses = (link) => {
+	const baseClasses = "block py-2 px-6  my-1 transition-colors border-l hover:border-slate-400 text-slate-500 hover:text-slate-900"
+
+	if (isCurrentPage(link)) {
+		return baseClasses + " border-slate-500 text-slate-900";
+	} else {
+		return baseClasses;
+	}
+}
+---
+<div title="Site Navigation">
+	{/* Primary Navigation */}
+	<nav aria-labelledby="primary-navigation" class="navigation-bar navigation-bar-primary">
+        <div class="container">
+            <div class="row">
+                <ul class="navigation-bar-nav primary-nav col-12">
+			{NAVIGATION.filter(item => item.primary).map(item => (
+				<li>
+					<a href={item.link}>{item.text}</a>
+				</li>
+			))}
+		</ul>
+        </div>
+        </div>
+	</nav>
+	{/* Secondary Navigation */}
+	<nav aria-labelledby="secondary-navigation" class="navigation-bar navigation-bar-secondary">
+        <div class="container">
+            <div class="row">
+              <ul class="navigation-bar-nav secondary-nav col-12">
+			{NAVIGATION.filter(item => !item.primary).map(item => (
+				<li>
+					<a href={item.link}>{item.text}</a>
+				</li>
+			))}
+		</ul>
+    </div>
+    </div>
+	</nav>
+</div>
+
+<script is:inline>
+	window.addEventListener('DOMContentLoaded', (event) => {
+		var target = document.querySelector('[aria-current="page"]');
+		if (target && target.offsetTop > window.innerHeight - 100) {
+			document.querySelector('.nav-groups').scrollTop = target.offsetTop;
+		}
+	});
+</script>

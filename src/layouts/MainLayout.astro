@@ -4,9 +4,9 @@ import HeadSEO from '../components/HeadSEO.astro';
 import Header from '../components/Header/Header.astro';
 import PageContent from '../components/PageContent.astro';
 import LeftSidebar from '../components/LeftSidebar.astro';
-import RightSidebar from '../components/RightSidebar.astro';
 import * as CONFIG from '../config';
 import '../styles/main.scss';
+import Navigation from '../components/Navigation.astro';
 
 const { content = {} } = Astro.props;
 const currentPage = new URL(Astro.request.url).pathname;
@@ -20,17 +20,15 @@ const currentPage = new URL(Astro.request.url).pathname;
 		<title>{content.title ? `${content.title} 🚀 ${CONFIG.SITE.title}` : CONFIG.SITE.title}</title>
 	</head>
 
-	<body class="bg-stone-50">
-		<div class="sticky top-0 z-10 w-full">
+	<body class="bg-light-grey-2">
+		<div>
 			<Header currentPage={currentPage} />
 		</div>
-		<div class="grid grid-cols-12">
-			<div class="col-span-3 sticky top-0 pt-12 h-screen flex">
-				<div class="ml-auto">
-					<LeftSidebar currentPage={currentPage} />
-				</div>
-			</div>
-			<main class="py-4 px-8 pb-32 pr-0 col-span-8 overflow-auto">
+		<div>
+			<Navigation/>
+		</div>
+		<div>
+			<main>
 				<div>
 					<PageContent content={content}>
 						<slot />

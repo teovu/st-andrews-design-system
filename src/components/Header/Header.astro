@@ -6,36 +6,15 @@ import DocSearchReact from './DocSearchReact';
 const { currentPage } = Astro.props;
 ---
 
-<header class="p-3 bg-slate-100 bg-opacity-80 backdrop-blur-md border-b text-slate-900">
+<header>
 	<SkipToContent />
-	<nav title="Top Navigation" class="max-w-full mx-auto flex justify-between items-center px-4">
-		<div>
-			<a class="text-lg font-medium" href="/">
-				<h1>
-					{SITE.title ?? "Documentation"}
-				</h1>
-			</a>
+	<header class="container" style="display: flex; justify-content: space-between; align-items:center;">
+		<!-- todo: add style to header in dpl -->
+        <div class="col-12 header-content">
+            <img src="https://design.st-andrews.ac.uk/assets/images/university-of-st-andrews-logo-foundation.svg" alt="University of St Andrews Logo" class="logo">
+			<!-- Algolia Docsearch component (Header/DocSearchReact) -->
 		</div>
-
-		<!-- Algolia Docsearch component (Header/DocSearchReact) -->
 		<DocSearchReact client:only="react"/>
-
-		<div class="flex gap-2">
-		<!-- <button onclick="toggleDarkMode()">theme</button> -->
-		{
-			SITE.github &&
-			(<a title="Github" class="opacity-80 hover:opacity-100 hover:bg-slate-200 p-2 rounded-full transition-colors" href={'https://github.com/'+SITE.github}>
-				<img class="h-7" src="/github.svg" alt="github logo">
-			</a>)
-		}
-		</div>
-	</nav>
+    </header>
+</div>
 </header>
-
-<script is:inline>
-	// function toggleDarkMode() {
-	// 	const body = document.body;
-	// 	body.classList.toggle('dark');
-	// 	console.log('dark mode toggled');
-	// }
-</script>

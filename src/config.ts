@@ -1,6 +1,6 @@
 export const SITE = {
   title: "Standards",
-  description: "The University of Saint Andrews Design System",
+  description: "The University of St Andrews Design System",
   defaultLanguage: "en_UK",
   twitter: "@univofstandrews",
   github: "tvu1",
@@ -24,14 +24,32 @@ export const SIDEBAR = [
   { text: "Components", header: true },
   { text: "Introduction", link: "/components/introduction" },
   { text: "Buttons", link: "/components/buttons" },
-  // { text: "Input", link: "/components/input" },
-  // { text: "Status pills", link: "/components/status-pill" },
-  // { text: "Table", link: "/components/table" },
 
   { text: "Patterns", header: true },
   { text: "Introduction", link: "/patterns/introduction" },
 
   { text: "Documentation", header: true },
+  { text: "Adding sections", link: "/documentation/adding-sections" },
+  { text: "Adding pages", link: "/documentation/adding-pages" },
+  { text: "Core customization", link: "/documentation/core-customization" },
+  { text: "Adding components", link: "/documentation/adding-components" },
+  { text: "Preview utility", link: "/documentation/preview-utility" },
+];
+
+export const NAVIGATION = [
+  { text: "Core", header: true, primary: true },
+  { text: "Introduction", link: "/core/introduction" },
+  { text: "Colors", link: "/core/colors" },
+  { text: "Typography", link: "/core/typography" },
+
+  { text: "Components", header: true, primary: true },
+  { text: "Introduction", link: "/components/introduction" },
+  { text: "Buttons", link: "/components/buttons" },
+
+  { text: "Patterns", header: true, primary: true },
+  { text: "Introduction", link: "/patterns/introduction" },
+
+  { text: "Documentation", header: true, primary: true },
   { text: "Adding sections", link: "/documentation/adding-sections" },
   { text: "Adding pages", link: "/documentation/adding-pages" },
   { text: "Core customization", link: "/documentation/core-customization" },
