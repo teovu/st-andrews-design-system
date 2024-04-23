@@ -4,6 +4,49 @@ body {
   font-family: "PT Sans",Arial, Helvetica, sans-serif
 }
 
+.index-header {
+  padding: 1.5rem 0; // Sets top and bottom padding to 1.5 rem and left and right padding to 0
+    display: flex;
+    justify-content: center; // Horizontally centers the content
+    align-items: center; // Vertically centers the content
+    width: 100%; // Ensures the header extends the full width of its container
+    .container {
+      width: 100%; // Ensures the container within the header also takes full width
+      display: flex;
+      justify-content: center; // Centers the container's content horizontally
+      align-items: center; // Centers the container's content vertically
+
+      .row {
+          width: 100%; // Ensures the row within the container takes full width
+          display: flex;
+          justify-content: center; // Centers the row's content horizontally
+          align-items: center;
+          .col {
+            display: flex;
+            flex-direction: column; // Stacks the logo, title, and description vertically
+            justify-content: center; // Centers the column's content vertically
+            align-items: center; // Centers the column's content horizontally
+            text-align: center; // Ensures text within the column is centered
+        }
+      }
+    }
+}
+
+.nav-link {
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  text-align: left;
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+      outline: 5px solid #ffb400;
+      text-decoration: none;
+  }
+}
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
