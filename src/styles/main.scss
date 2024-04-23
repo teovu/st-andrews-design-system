@@ -46,6 +46,54 @@ body {
   }
 }
 
+// /* Sidebar and Burger Menu Styles */
+// .sidebar {
+//   position: fixed; /* Keep sidebar fixed on the side */
+//   top: 0;
+//   left: 0;
+//   bottom: 0;
+//   width: 250px; /* Fixed width for large screens */
+//   background: white;
+//   box-shadow: 2px 0 12px rgba(0,0,0,0.25);
+//   transform: translateX(-100%); /* Hide by default */
+//   transition: transform 0.3s ease-in-out;
+//   z-index: 1050; /* High z-index to be on top */
+// }
+
+// .burger {
+//   display: none; /* Hidden on large screens */
+//   position: absolute;
+//   top: 10px; /* Position at the top of the sidebar */
+//   left: 10px; /* Slightly in from the left edge */
+//   font-size: 24px;
+//   cursor: pointer;
+//   z-index: 1051; /* Above the sidebar */
+// }
+
+// @media (max-width: 768px) {
+//   .burger {
+//       display: block; /* Show burger on small screens */
+//   }
+//   .sidebar {
+//       width: 100%;
+//       /*Fullwidthonsmallscreens*/transform: translateX(-100%);
+//        /* Start offscreen */  :;
+//       -webkit-transform: translateX(-100%);
+//       -moz-transform: translateX(-100%);
+//       -ms-transform: translateX(-100%);
+//       -o-transform: translateX(-100%);
+// }
+//   .sidebar.open {
+//       transform: translateX(0); /* Slide in */
+//   }
+// }
+
+// /* Additional styles to prevent scrolling on the body when the sidebar is open */
+// body.modal-open {
+//   overflow: hidden;
+// }
+
+
 
 @tailwind base;
 @tailwind components;
