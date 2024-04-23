@@ -1,6 +1,6 @@
 export const SITE = {
   title: "Standards",
-  description: "The University of Saint Andrews Design System",
+  description: "The University of St Andrews Design System",
   defaultLanguage: "en_UK",
   twitter: "@univofstandrews",
   github: "tvu1",
@@ -24,9 +24,6 @@ export const SIDEBAR = [
   { text: "Components", header: true },
   { text: "Introduction", link: "/components/introduction" },
   { text: "Buttons", link: "/components/buttons" },
-  // { text: "Input", link: "/components/input" },
-  // { text: "Status pills", link: "/components/status-pill" },
-  // { text: "Table", link: "/components/table" },
 
   { text: "Patterns", header: true },
   { text: "Introduction", link: "/patterns/introduction" },
