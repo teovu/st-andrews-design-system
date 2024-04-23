@@ -4,6 +4,97 @@ body {
   font-family: "PT Sans",Arial, Helvetica, sans-serif
 }
 
+.index-header {
+  padding: 1.5rem 0; // Sets top and bottom padding to 1.5 rem and left and right padding to 0
+    display: flex;
+    justify-content: center; // Horizontally centers the content
+    align-items: center; // Vertically centers the content
+    width: 100%; // Ensures the header extends the full width of its container
+    .container {
+      width: 100%; // Ensures the container within the header also takes full width
+      display: flex;
+      justify-content: center; // Centers the container's content horizontally
+      align-items: center; // Centers the container's content vertically
+
+      .row {
+          width: 100%; // Ensures the row within the container takes full width
+          display: flex;
+          justify-content: center; // Centers the row's content horizontally
+          align-items: center;
+          .col {
+            display: flex;
+            flex-direction: column; // Stacks the logo, title, and description vertically
+            justify-content: center; // Centers the column's content vertically
+            align-items: center; // Centers the column's content horizontally
+            text-align: center; // Ensures text within the column is centered
+        }
+      }
+    }
+}
+
+.nav-link {
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  text-align: left;
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+      outline: 5px solid #ffb400;
+      text-decoration: none;
+  }
+}
+
+// /* Sidebar and Burger Menu Styles */
+// .sidebar {
+//   position: fixed; /* Keep sidebar fixed on the side */
+//   top: 0;
+//   left: 0;
+//   bottom: 0;
+//   width: 250px; /* Fixed width for large screens */
+//   background: white;
+//   box-shadow: 2px 0 12px rgba(0,0,0,0.25);
+//   transform: translateX(-100%); /* Hide by default */
+//   transition: transform 0.3s ease-in-out;
+//   z-index: 1050; /* High z-index to be on top */
+// }
+
+// .burger {
+//   display: none; /* Hidden on large screens */
+//   position: absolute;
+//   top: 10px; /* Position at the top of the sidebar */
+//   left: 10px; /* Slightly in from the left edge */
+//   font-size: 24px;
+//   cursor: pointer;
+//   z-index: 1051; /* Above the sidebar */
+// }
+
+// @media (max-width: 768px) {
+//   .burger {
+//       display: block; /* Show burger on small screens */
+//   }
+//   .sidebar {
+//       width: 100%;
+//       /*Fullwidthonsmallscreens*/transform: translateX(-100%);
+//        /* Start offscreen */  :;
+//       -webkit-transform: translateX(-100%);
+//       -moz-transform: translateX(-100%);
+//       -ms-transform: translateX(-100%);
+//       -o-transform: translateX(-100%);
+// }
+//   .sidebar.open {
+//       transform: translateX(0); /* Slide in */
+//   }
+// }
+
+// /* Additional styles to prevent scrolling on the body when the sidebar is open */
+// body.modal-open {
+//   overflow: hidden;
+// }
+
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

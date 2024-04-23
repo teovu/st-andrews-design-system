@@ -1,5 +1,6 @@
 ---
 import './../styles/main.scss';
+import './../styles/main.css';
 import { SITE } from "../config";
 const navItems = [
 	{
@@ -27,25 +28,35 @@ const navItems = [
 
 
 
-<div class="bg-[#0071B3] min-h-screen text-center blue-primary">
-	<header class="pt-12 pb-12 bg-slate-950">
-		<div class="flex items-center justify-center p-4">
-			<img src="/astro-design-system-logo.svg" alt="University of St Andrews Logo">
+<div class="bg-blue-primary min-h-screen text-blue-primary">
+	<header class="index-header">
+		<div class="container">
+			<div class="row">
+				<div class="col col-12-xl col-12-xxs">
+					<div>
+						<img src="/astro-design-system-logo.svg" alt="University of St Andrews Logo">
+					</div>
+					<h1 class=" text-light-grey-2">{SITE.title}</h1>
+					<p class="text-light-grey-2">{SITE.description}</p>
+				</div>
+			</div>
 		</div>
-		<h1 class=" text-white text-4xl font-medium drop-shadow-sm">{SITE.title}</h1>
-		<p class="text-lg mt-4 text-slate-300">{SITE.description}</p>
 	</header>
 	<nav>
-		<ul class="flex flex-col sm:flex-row gap-4 max-w-5xl mx-auto text-left mt-12">
+		<ul>
+			<div class="container">
+			<div class="row">
 		{
 			navItems.map(({ title, description, url, img }) => (
-				<a href={url} class="flex flex-col bg-white hover:-translate-y-1 hover:shadow-lg transition-all items-center p-4 text-left">
+				<a href={url} class="col col-4-md bg-light-grey-1 nav-link">
 					<img src={img} alt={title}>
-					<h2 class="text-lg font-medium text-left">{title}</h2>
-					<p class="text-slate-500">{description}</p>
+					<h2>{title}</h2>
+					<p class="text-blue-25-shade">{description}</p>
 				</a>
 			))
 		}
+			</div>
+		</div>
 		</ul>
 	</nav>
 </div>

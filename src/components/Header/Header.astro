@@ -2,40 +2,31 @@
 import { SITE } from '../../config';
 import SkipToContent from './SkipToContent.astro';
 import DocSearchReact from './DocSearchReact';
+import '../../styles/main.scss';
+import '../../styles/main.css';
+
 
 const { currentPage } = Astro.props;
 ---
 
-<header class="p-3 bg-slate-100 bg-opacity-80 backdrop-blur-md border-b text-slate-900">
-	<SkipToContent />
-	<nav title="Top Navigation" class="max-w-full mx-auto flex justify-between items-center px-4">
-		<div>
-			<a class="text-lg font-medium" href="/">
-				<h1>
-					{SITE.title ?? "Documentation"}
-				</h1>
-			</a>
-		</div>
-
-		<!-- Algolia Docsearch component (Header/DocSearchReact) -->
-		<DocSearchReact client:only="react"/>
-
-		<div class="flex gap-2">
-		<!-- <button onclick="toggleDarkMode()">theme</button> -->
-		{
-			SITE.github &&
-			(<a title="Github" class="opacity-80 hover:opacity-100 hover:bg-slate-200 p-2 rounded-full transition-colors" href={'https://github.com/'+SITE.github}>
-				<img class="h-7" src="/github.svg" alt="github logo">
-			</a>)
-		}
-		</div>
-	</nav>
+<header class="container">
+    <SkipToContent/>
+    <div class="row">
+        <div class="col col-12 header-content" style="display: flex; justify-content: space-between; align-items: center;">
+            <img src="https://design.st-andrews.ac.uk/assets/images/university-of-st-andrews-logo-foundation.svg" alt="University of St Andrews Logo" class="logo">
+            <DocSearchReact client:only="react"/>
+        </div>
+    </div>
 </header>
 
-<script is:inline>
-	// function toggleDarkMode() {
-	// 	const body = document.body;
-	// 	body.classList.toggle('dark');
-	// 	console.log('dark mode toggled');
-	// }
-</script>
+<div class="category-header">
+    <div class="container">
+        <div class="row">
+    <div class="col col-12-lg col-12-xxs">
+		<!--Style for index page disappears when navigating from here: -->
+        <!-- <h2><a href="/">Standards</a></h2> -->
+		<h2>Standards</h2>
+        </div>
+    </div>
+    </div>
+    </div>
